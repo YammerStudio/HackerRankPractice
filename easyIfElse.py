@@ -11,12 +11,14 @@ If  is even and greater than , print Not Weird
 
 '''
 
-N = int(input())
+N = int (input())
+
 if N % 2 == 1:
-    print( 'Weird')
-elif (N % 2 == 0) and range(2,6):
-    print ('Not Weird')
-elif (N % 2 == 0) and range(6, 21):
     print ('Weird')
-elif (N % 2 == 0) and (N > 20):
-    print('Not Weird')
+if N % 2 == 0:
+    if N in range(2,6):
+        print('Not Weird')
+    elif N in range(6, 21):
+        print('Weird')
+    else:
+        print('Not Weird')
